@@ -1,0 +1,19 @@
+{
+  "name": "test-sandbox",
+  "version": "1.0.0",
+  "description": "Testing out tests and stuff in simple sandbox",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test/*.spec.js --reporter spec --recursive --growl",
+    "spec": "mocha ./test/*.spec.js -R markdown > ./spec.md",
+    "istanbul" : "istanbul cover node_modules/.bin/_mocha",
+    "check-coveragen" : "istanbul check-coverage"
+  },
+  "author": "DKunin",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "3.5.0",
+    "istanbul": "0.4.4",
+    "mocha": "2.5.3"
+  }
+}
