@@ -1,5 +1,6 @@
 # TOC
    - [divide](#divide)
+     - [#divide by zero()](#divide-divide-by-zero)
    - [summ](#summ)
 <a name=""></a>
  
@@ -17,6 +18,8 @@ should divide two by two.
 assert.equal(divide(4, 2), 2);
 ```
 
+<a name="divide-divide-by-zero"></a>
+## #divide by zero()
 <a name="summ"></a>
 # summ
 should add two and two.
