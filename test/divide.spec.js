@@ -1,5 +1,6 @@
-var assert = require('chai').assert;
-var divide = require('../lib').divide;
+// var assert = require('chai').assert;
+import { assert } from 'chai';
+import { divide } from '../lib';
 
 describe('divide', function() {
     // Async operations

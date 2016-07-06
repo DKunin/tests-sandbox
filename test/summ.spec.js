@@ -1,5 +1,5 @@
-var assert = require('chai').assert;
-var summ = require('../lib').summ;
+import { assert } from 'chai';
+import { summ } from '../lib';
 
 describe('summ', function() {
     it('should add two and two', function() {
