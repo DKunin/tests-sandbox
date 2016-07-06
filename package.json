@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha ./test/*.spec.js --reporter spec  --recursive",
+    "test:babel": "./node_modules/.bin/_mocha ./test/*.spec.js --compilers js:babel-core/register",
     "test:watch": "mocha ./test/*.spec.js --reporter spec  --recursive --watch",
     "spec": "mocha ./test/*.spec.js -R markdown > ./spec.md",
     "istanbul": "istanbul cover node_modules/.bin/_mocha",
-    "istanbul:node": "istanbul cover --include-all-sources bin/run-tests",
-    "istanbul:babel": "babel-esnext ./node_modules/babel-istanbul/lib/cli cover --dir ./coverage node_modules/.bin/_mocha",
+    "istanbul:babel": "istanbul cover mocha -- --compilers js:babel/register",
+    "istanbul:babel2": "node_modules/.bin/nyc --require babel-core/register node_modules/.bin/mocha",
     "check-coveragen": "istanbul check-coverage"
   },
   "author": "DKunin",
@@ -19,7 +20,6 @@
     "istanbul": "0.4.4",
     "mocha": "2.5.3",
     "babel-core": "6.7.4",
-    "babel-loader": "6.2.4",
     "babel-plugin-external-helpers-2": "6.3.13",
     "babel-plugin-syntax-class-properties": "6.5.0",
     "babel-plugin-syntax-export-extensions": "6.5.0",
@@ -33,7 +33,9 @@
     "babel-preset-react": "6.5.0"
   },
   "dependencies": {
-    "babel-esnext": "0.2.3",
-    "babel-istanbul": "0.11.0"
+    "babel-core": "6.10.4",
+    "babel-preset-es2015": "6.9.0",
+    "mocha": "2.5.3",
+    "nyc": "6.6.1"
   }
 }

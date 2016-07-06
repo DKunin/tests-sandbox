@@ -1,4 +1,3 @@
-// var assert = require('chai').assert;
 import { assert } from 'chai';
 import { divide } from '../lib';
 

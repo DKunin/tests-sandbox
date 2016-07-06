@@ -1,0 +1,12 @@
+{
+    plugins: [
+        'syntax-object-rest-spread',
+        'transform-object-rest-spread',
+        'syntax-class-properties',
+        'transform-class-properties',
+        'syntax-export-extensions',
+        'transform-export-extensions'
+    ],
+    presets: ['es2015-loose']
+}
+
